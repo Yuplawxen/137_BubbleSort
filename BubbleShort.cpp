@@ -68,3 +68,15 @@ void bubbleSortArray() { //prosedur untuk mengurutkan array
         cout << endl;
         cout << endl;
     }
+
+    int main() {
+         
+        input();
+
+        bubbleSortArray();
+        display();
+
+        system("pause");
+        return 0;
+    }
+    
