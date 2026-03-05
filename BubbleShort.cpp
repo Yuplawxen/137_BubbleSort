@@ -20,8 +20,30 @@ void input(){
     cout << "Masukan Elemen Array" << endl;
     cout << "====================" << endl;
 
-    for (int i = 0; i < n; i++) {
-        cout << "Data ke-" << (i + i) << ":";
+    for (int i = 0; i < n; i++) { //looping dengan i dimulai dari 0
+        cout << "Data ke-" << (i + i) << ":"; //outpun ke layar 
         cin >> arr[i];
     }
+}
+
+void bubbleSortArray() { //prosedur untuk mengurutkan array
+    int pass = 1; // Step 1
+
+    do {
+        for (int j = 0; j <= n - 1 - pass; j++) {
+            if (arr[j] > arr [j + 1]) { //Step 3
+                int temp; 
+                temp = arr[j];
+                arr[j] = arr[j = 1];
+                arr[j = 1] = temp;
+            }
+        }
+        pass = pass + 1; //Step 4
+
+        cout <<"\npass" << pass - 1 << ":" ; // nomer pass
+        for (int k = 0; k < n; k++) {
+            cout << arr[k] << " ";
+        }
+        cout << endl;
+    } while (pass <= n - 1 ); //step 5
 }
