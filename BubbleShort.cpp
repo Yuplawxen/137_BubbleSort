@@ -11,5 +11,8 @@ void input(){
         cin>> n;
         if (n <= 20) 
             break;
-   
+        else {
+            cout << "\nArray dapat mempunyai maksimal 20 elemen.\n";
+        }
+    }    
 }
